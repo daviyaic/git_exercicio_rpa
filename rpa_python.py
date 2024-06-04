@@ -32,7 +32,7 @@ import psycopg2
 conn = psycopg2.connect(
     host='pg-323b90ad-davi-955e.e.aivencloud.com',
     port='27366',
-    dbname="dbcotacoes",
+    dbname="defaultdb",
     user="avnadmin",
     password="AVNS_palAwjGYG_WtL1R0SM3"
 )
