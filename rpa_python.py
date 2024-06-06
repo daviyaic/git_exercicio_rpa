@@ -8,7 +8,7 @@ options.add_argument("--headless=new")
 driver = webdriver.Chrome(options=options)
 driver.get("https://www.google.com/search?q=dolar&rlz=1C1GCEU_pt-BRBR1077BR1077&oq=dolar&gs_lcrp=EgZjaHJvbWUqDggAEEUYJxg7GIAEGIoFMg4IABBFGCcYOxiABBiKBTIMCAEQABhDGIAEGIoFMg0IAhAAGIMBGLEDGIAEMg0IAxAAGIMBGLEDGIAEMgwIBBAAGEMYgAQYigUyDAgFEAAYQxiABBiKBTIKCAYQABixAxiABDIPCAcQABhDGLEDGIAEGIoFMgwICBAAGEMYgAQYigUyBwgJEAAYjwLSAQk1MDI4OGowajeoAgCwAgA&sourceid=chrome&ie=UTF-8")
  
-sleep(3)
+sleep(10)
 dolar = driver.find_element('xpath','//*[@id="knowledge-currency__updatable-data-column"]/div[1]/div[2]/span[1]').text
 tempo = driver.find_element('xpath','//*[@id="knowledge-currency__updatable-data-column"]/div[2]/span').text
 driver.close()
