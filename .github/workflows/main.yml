@@ -24,6 +24,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run rpa
-        run: python rpa_python.py
+      - name: Coverage rpa
+        run: coverage run rpa_python
+
+      - name: Generate coverage report
+        run: |
+          coverage report
+          coverage xml
 
