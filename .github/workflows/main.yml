@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    name: python_coverage
+    name: python_rpa
     runs-on: ubuntu-latest
 
     steps:
