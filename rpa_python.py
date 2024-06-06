@@ -1,16 +1,16 @@
 from time import sleep
-
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 
 options = webdriver.ChromeOptions()
 options.add_argument("--headless=new")
  
 driver = webdriver.Chrome(options=options)
-driver.get("https://www.google.com/search?q=dolar&rlz=1C1GCEU_pt-BRBR1077BR1077&oq=dolar&gs_lcrp=EgZjaHJvbWUqDggAEEUYJxg7GIAEGIoFMg4IABBFGCcYOxiABBiKBTIMCAEQABhDGIAEGIoFMg0IAhAAGIMBGLEDGIAEMg0IAxAAGIMBGLEDGIAEMgwIBBAAGEMYgAQYigUyDAgFEAAYQxiABBiKBTIKCAYQABixAxiABDIPCAcQABhDGLEDGIAEGIoFMgwICBAAGEMYgAQYigUyBwgJEAAYjwLSAQk1MDI4OGowajeoAgCwAgA&sourceid=chrome&ie=UTF-8")
+driver.get("https://br.investing.com/currencies/usd-brl")
  
-sleep(10)
-dolar = driver.find_element('xpath','//*[@id="knowledge-currency__updatable-data-column"]/div[1]/div[2]/span[1]').text
-tempo = driver.find_element('xpath','//*[@id="knowledge-currency__updatable-data-column"]/div[2]/span').text
+sleep(8)
+dolar = driver.find_element(By.CLASS_NAME, "text-5xl/9 font-bold text-[#232526] md:text-[42px] md:leading-[60px]").text
+tempo = driver.find_element(By.TAG_NAME, 'time').text
 driver.close()
 dolar = dolar.replace(',','.')
 
